@@ -11,7 +11,9 @@ declare namespace DS1820pxt {
      */
     //% blockId=probe_init
     //% block="connect temperature probe to %pin" shim=DS1820pxt::init
-    function init(pin: Pins): void;
+    function init(pin: Pins): void{
+        return;
+    }
 
     /**
      * get temperature to 1 decimal place (*10)
