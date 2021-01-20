@@ -499,4 +499,3 @@ inline void MicroBit::seedRandom()
   * @endcode
   */
 inline void MicroBit::seedRandom(uint32_t seed)
-{
