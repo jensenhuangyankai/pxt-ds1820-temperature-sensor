@@ -1,5 +1,6 @@
 #include "pxt.h"
 #include "source/DS1820.h"
+#include "source/mbed.h"
 
 using namespace pxt;
 

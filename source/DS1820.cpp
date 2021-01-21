@@ -1,4 +1,5 @@
 #include "DS1820.h"
+#include "mbed.h"
 
 #ifdef TARGET_STM
 //STM targets use opendrain mode since their switching between input and output is slow
