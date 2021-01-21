@@ -1,7 +1,7 @@
 {
-    "name": "DS1820 Temperature Sensor",
+    "name": "cpptemplate",
     "version": "0.0.1",
-    "description": "Tinkercademy DS1820 temperature sensor package",
+    "description": "Tinkercademy PXT CPP Template Package",
     "license": "MIT",
     "dependencies": {
         "core": "*"
@@ -15,7 +15,6 @@
         "source/DS1820.h",
         "source/LinkedList.cpp",
         "source/LinkedList.h"
-        "source/mbed.h"
     ],
     "testFiles": [
         "cpptemplatetest.ts"

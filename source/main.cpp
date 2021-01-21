@@ -1,6 +1,5 @@
 #include "MicroBit.h"
 #include "DS1820.h"
-#include "mbed.h"
 
 MicroBit uBit;
  
