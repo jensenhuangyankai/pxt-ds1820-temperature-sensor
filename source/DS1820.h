@@ -20,10 +20,11 @@
  * THE SOFTWARE.
  */
 
+#include "mbed.h"
 #ifndef MBED_DS1820_H
 #define MBED_DS1820_H
 
-#include "mbed.h"
+
 #include "LinkedList.h"
 
 #define FAMILY_CODE _ROM[0]
@@ -113,22 +114,22 @@ private:
     bool _power_polarity;
     
     static char CRC_byte(char _CRC, char byte );
-    static bool onewire_reset(DigitalInOut *pin);
+    static bool onewire_reset(DigitalOut *pin);
     void match_ROM();
     void skip_ROM();
-    static bool search_ROM_routine(DigitalInOut *pin, char command, char *ROM_address);
-    static void onewire_bit_out (DigitalInOut *pin, bool bit_data);
+    static bool search_ROM_routine(DigitalOut *pin, char command, char *ROM_address);
+    static void onewire_bit_out (DigitalOut *pin, bool bit_data);
     void onewire_byte_out(char data);
-    static bool onewire_bit_in(DigitalInOut *pin);
+    static bool onewire_bit_in(DigitalIn *pin);
     char onewire_byte_in();
     static bool ROM_checksum_error(char *_ROM_address);
     bool RAM_checksum_error();
     void read_RAM();
-    static bool unassignedProbe(DigitalInOut *pin, char *ROM_address);
+    static bool unassignedProbe(DigitalOut *pin, char *ROM_address);
     void write_scratchpad(int data);
     bool read_power_supply(devices device=this_device);
 
-    DigitalInOut _datapin;
+    DigitalOut _datapin;
     DigitalOut _parasitepin;
     
     char _ROM[8];
