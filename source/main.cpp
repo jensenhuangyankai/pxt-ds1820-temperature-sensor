@@ -7,9 +7,10 @@ DS1820 probe((PinName)DATA_PIN);
  
 
 Microbit uBit;
-uBit.init();
+
 
 int main() {
+  uBit.init();
     while(1) {
         probe.convertTemperature(true, DS1820::all_devices);         //Start temperature conversion, wait until ready
         //uBit.serial.printf("It is %3.1foC\r\n", probe.temperature());
