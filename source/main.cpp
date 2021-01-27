@@ -1,4 +1,4 @@
-#include "MicroBit.h"
+//#include "MicroBit.h"
 #include "DS1820.h"
 #include "main.h"
 
