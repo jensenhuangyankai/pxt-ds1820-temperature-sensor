@@ -1,14 +1,15 @@
 #include "MicroBit.h"
 #include "DS1820.h"
-#include "mbed.h"
+#include "main.h"
 
-//MicroBit uBit;
- 
 #define DATA_PIN        3
 DS1820 probe((PinName)DATA_PIN);
  
+
+Microbit uBit;
+uBit.init();
+
 int main() {
-  //uBit.init();
     while(1) {
         probe.convertTemperature(true, DS1820::all_devices);         //Start temperature conversion, wait until ready
         //uBit.serial.printf("It is %3.1foC\r\n", probe.temperature());
