@@ -1,6 +1,5 @@
 #include "MicroBit.h"
 #include "DS1820.h"
-#include "main.h"
 
 #define DATA_PIN        3
 DS1820 probe((PinName)DATA_PIN);

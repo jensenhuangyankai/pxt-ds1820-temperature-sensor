@@ -24,8 +24,7 @@
 #define MBED_DS1820_H
 
 #include "LinkedList.h"
-#include "main.h"
-
+#include "MicroBit.h"
 #define FAMILY_CODE _ROM[0]
 #define FAMILY_CODE_DS1820 0x10
 #define FAMILY_CODE_DS18B20 0x28
