@@ -4,10 +4,10 @@
 //STM targets use opendrain mode since their switching between input and output is slow
     #define ONEWIRE_INPUT(pin)  pin.setDigitalValue(1)
     #define ONEWIRE_OUTPUT(pin) 
-    #define ONEWIRE_INIT(pin)   pin->setDigitalValue(); //pin->mode(OpenDrain)
+    #define ONEWIRE_INIT(pin)   pin->setDigitalValue(0); //pin->mode(OpenDrain)
 #else
-    #define ONEWIRE_INPUT(pin)  pin->setDigitalValue()
-    #define ONEWIRE_OUTPUT(pin) pin->setDigitalValue()
+    #define ONEWIRE_INPUT(pin)  pin->setDigitalValue(0)
+    #define ONEWIRE_OUTPUT(pin) pin->setDigitalValue(0)
     #define ONEWIRE_INIT(pin)
 #endif
 
@@ -30,7 +30,7 @@ void init_soft_delay( void ) {
 }
 #else
     #define INIT_DELAY
-    #define ONEWIRE_DELAY_US(value) wait_us(value)
+    #define ONEWIRE_DELAY_US(value) sleep(value)
 #endif
 
 LinkedList<node> DS1820::probes;
